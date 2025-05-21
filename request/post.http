@@ -1,0 +1,29 @@
+### Fetch All Posts
+GET http://localhost:3000/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0NzQzNDIxNSwiZXhwIjoxNzQ3ODY2MjE1fQ.7v4OMVjcY5kO0Vl6ZQXF47WROgG3C22MN0q4C6aT3n8
+
+### Fetch user Posts
+GET http://localhost:3000/post/user/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0NzQzNDIxNSwiZXhwIjoxNzQ3ODY2MjE1fQ.7v4OMVjcY5kO0Vl6ZQXF47WROgG3C22MN0q4C6aT3n8
+
+
+
+### Create Post
+POST http://localhost:3000/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Nzg1OTYyNSwiZXhwIjoxNzQ4MjkxNjI1fQ.b3VB7taCNzDPF6pSOT1I2aAq-MJUieR96zxFL-AwST4
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "description": "Funciona el web socket?",
+  "location": "New York",
+  "pictureId": "12345f",
+  "picturePath": "https://images.unsplash.com/photo-1504595403659-9088ce801e29?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "userPicturePath": "https://images.unsplash.com/photo-1615109398623-88346a601842?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+}
+
+### Delete Post
+DELETE  http://localhost:3000/post/34
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Nzg2NTUzMCwiZXhwIjoxNzQ4Mjk3NTMwfQ.BuAP8O-vx1yoO7FxL-QpUAkaz4nAEAdCeSKvjTfaog8

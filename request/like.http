@@ -1,0 +1,3 @@
+### Add and Remove Like
+POST http://localhost:3000/like/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Nzg2NjI3NywiZXhwIjoxNzQ4Mjk4Mjc3fQ.lkyHXfWY8JAfIvxADFQmhABCKBiCnRtutfSReIJYIIs

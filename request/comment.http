@@ -1,0 +1,17 @@
+### Fetch Comments By Post Id
+GET http://localhost:3000/comment/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0NzQzNDU4MCwiZXhwIjoxNzQ3ODY2NTgwfQ.RCtNzSrW_bBiaAoP1F0pf9J293LjZfD6GvJ3KNEBmqs
+
+
+### Create Comment
+POST http://localhost:3000/comment/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0NzA5Mjk2MCwiZXhwIjoxNzQ3MjY1NzYwfQ.2_13EQs7O8iI5cpwdRvFUIgM7hAsUI49ldyTjsCGX0M
+
+{
+  "comment": "Checamos que sea el mismo Id"
+}
+
+### Delete comment
+DELETE http://localhost:3000/comment/post/4/comment/25
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0NzA5Mjk2MCwiZXhwIjoxNzQ3MjY1NzYwfQ.2_13EQs7O8iI5cpwdRvFUIgM7hAsUI49ldyTjsCGX0M
