@@ -3,7 +3,11 @@ import db from "../config/db.js";
 class CommentModel {
   static async fetchCommentsByPostId({ postId }) {
     const result = await db.execute({
-      sql: "SELECT text FROM comments WHERE postId = ?",
+      sql: `
+        SELECT c.id ,c.text as comment, u.firstName, u.lastName, u.profilePicture
+        FROM comments c 
+        JOIN users u ON u.id = c.userId
+        WHERE postId = ?`,
       args: [postId],
     });
     return result.rows;

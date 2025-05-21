@@ -1,9 +1,6 @@
 import PostModel from "../models/PostModel.js";
 import CommentModel from "../models/CommentModel.js";
-import {
-  emitCommentCreated,
-  emitCommentDeleted,
-} from "../utils/socketEmitter.js";
+import { emitCommentDeleted, emitPostCreated } from "../utils/socketEmitter.js";
 
 class CommentController {
   static async createComment(req, res) {
@@ -37,9 +34,11 @@ class CommentController {
       );
     }
 
-    emitCommentCreated(req, newComment);
+    const post = await PostModel.fetchPostById({ postId: postId });
 
-    res.status(201).json({ message: "Comment created successfully " });
+    emitPostCreated(req, post);
+
+    res.status(201).json({ message: "Comment created successfully" });
   }
 
   static async fetchCommentsByPostId(req, res) {
@@ -59,7 +58,6 @@ class CommentController {
   static async deleteComment(req, res) {
     const { userId } = req.user;
     const { commentId, postId } = req.params;
-    const postIdNumb = Number(postId);
 
     const isCommentDeleted = await CommentModel.deleteComment({
       userId,
@@ -72,7 +70,9 @@ class CommentController {
         .json({ message: "Error deleting comment. Please try again later." });
     }
 
-    emitCommentDeleted(req, commentId, postIdNumb);
+    const post = await PostModel.fetchPostById({ postId: postId });
+
+    emitPostCreated(req, post);
 
     res.status(200).json({ message: "Comment deleted successfully" });
   }

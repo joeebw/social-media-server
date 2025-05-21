@@ -18,11 +18,9 @@ class PostController {
           postId: post.id,
         });
 
-        const formattedComments = commentPost.map((comment) => comment.text);
-
         return {
           ...post,
-          comments: formattedComments,
+          comments: commentPost,
           datePost: post.createdAt,
         };
       })

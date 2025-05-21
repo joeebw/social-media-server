@@ -1,6 +1,6 @@
 ### Fetch All Posts
 GET http://localhost:3000/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0NzQzNDIxNSwiZXhwIjoxNzQ3ODY2MjE1fQ.7v4OMVjcY5kO0Vl6ZQXF47WROgG3C22MN0q4C6aT3n8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Nzg2Nzk0MywiZXhwIjoxNzQ4Mjk5OTQzfQ.z6mtKqaEUd9338S2OAFr9wkw6D1ce3iDOz082m46kbU
 
 ### Fetch user Posts
 GET http://localhost:3000/post/user/4
