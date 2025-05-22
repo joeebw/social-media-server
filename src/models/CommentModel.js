@@ -4,7 +4,7 @@ class CommentModel {
   static async fetchCommentsByPostId({ postId }) {
     const result = await db.execute({
       sql: `
-        SELECT c.id ,c.text as comment, u.firstName, u.lastName, u.profilePicture
+        SELECT c.id , c.userId, c.text as comment, u.firstName, u.lastName, u.profilePicture
         FROM comments c 
         JOIN users u ON u.id = c.userId
         WHERE postId = ?`,

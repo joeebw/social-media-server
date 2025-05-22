@@ -1,6 +1,6 @@
 ### Fetch All Posts
 GET http://localhost:3000/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Nzg2Nzk0MywiZXhwIjoxNzQ4Mjk5OTQzfQ.z6mtKqaEUd9338S2OAFr9wkw6D1ce3iDOz082m46kbU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImlhdCI6MTc0Nzk0NDgzNiwiZXhwIjoxNzQ4Mzc2ODM2fQ.D1dW2fnEQ293RQxzerB0i4ZH9VddJU2W9PKIFIK6EcM
 
 ### Fetch user Posts
 GET http://localhost:3000/post/user/4
@@ -11,7 +11,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhd
 ### Create Post
 POST http://localhost:3000/post
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0Nzg1OTYyNSwiZXhwIjoxNzQ4MjkxNjI1fQ.b3VB7taCNzDPF6pSOT1I2aAq-MJUieR96zxFL-AwST4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImlhdCI6MTc0Nzk0NDgzNiwiZXhwIjoxNzQ4Mzc2ODM2fQ.D1dW2fnEQ293RQxzerB0i4ZH9VddJU2W9PKIFIK6EcM
 
 {
   "firstName": "John",
