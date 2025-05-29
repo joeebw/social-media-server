@@ -1,11 +1,10 @@
 ### Fetch All Posts
 GET http://localhost:3000/post
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksImlhdCI6MTc0Nzk0NDgzNiwiZXhwIjoxNzQ4Mzc2ODM2fQ.D1dW2fnEQ293RQxzerB0i4ZH9VddJU2W9PKIFIK6EcM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0ODU2MDY1MiwiZXhwIjoxNzQ4OTkyNjUyfQ.qoZTEvM5v77Kj7y6gi35xuiHj5SqpJtYrp2z2KK0wHI
 
 ### Fetch user Posts
 GET http://localhost:3000/post/user/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0NzQzNDIxNSwiZXhwIjoxNzQ3ODY2MjE1fQ.7v4OMVjcY5kO0Vl6ZQXF47WROgG3C22MN0q4C6aT3n8
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjQsImlhdCI6MTc0ODU2MDY1MiwiZXhwIjoxNzQ4OTkyNjUyfQ.qoZTEvM5v77Kj7y6gi35xuiHj5SqpJtYrp2z2KK0wHI
 
 
 ### Create Post

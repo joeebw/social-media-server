@@ -18,6 +18,8 @@ class PostController {
           postId: post.id,
         });
 
+        console.log("commentPost", commentPost);
+
         return {
           ...post,
           comments: commentPost,
@@ -46,11 +48,9 @@ class PostController {
           postId: post.id,
         });
 
-        const formattedComments = commentsPost.map((comment) => comment.text);
-
         return {
           ...post,
-          comments: formattedComments,
+          comments: commentsPost,
           datePost: post.createdAt,
         };
       })

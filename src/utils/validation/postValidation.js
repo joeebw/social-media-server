@@ -5,8 +5,8 @@ const createPostSchema = z.object({
   lastName: z.string().min(1, "Last name is required"),
   description: z.string().min(1, "Description is required"),
   location: z.string().optional(),
-  pictureId: z.string().min(1, "Picture id is required"),
-  picturePath: z.string().min(1, "Picture path is required"),
+  pictureId: z.string().min(1, "Picture id is required").nullable(),
+  picturePath: z.string().min(1, "Picture path is required").nullable(),
   userPicturePath: z.string().min(1, "User picture path is required"),
 });
 

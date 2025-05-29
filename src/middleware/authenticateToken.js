@@ -14,7 +14,6 @@ const authenticateToken = async (req, res, next) => {
 
     req.user = { userId: Number(decoded.userId) };
 
-    console.log("next 🚀");
     next();
   } catch (error) {
     console.error(chalk.redBright("Token verification failed:", error.message));
