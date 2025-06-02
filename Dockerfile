@@ -1,6 +1,5 @@
-# Usa una imagen base de Node.js. Es buena práctica especificar la versión.
-# node:20-alpine es una imagen ligera y eficiente.
-FROM node:20-alpine
+
+FROM node:20-slim
 
 # Establece el directorio de trabajo dentro del contenedor.
 # Aquí es donde se copiará el código de tu aplicación.
