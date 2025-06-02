@@ -18,8 +18,6 @@ class PostController {
           postId: post.id,
         });
 
-        console.log("commentPost", commentPost);
-
         return {
           ...post,
           comments: commentPost,

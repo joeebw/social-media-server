@@ -14,15 +14,18 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://wolfstream.netlify.app",
+];
+
 const io = new SocketIOServer(server, {
   cors: {
     // Configure CORS for Socket.IO if your frontend is on a different origin
-    origin: "*",
+    origin: allowedOrigins,
     methods: ["GET", "POST", "DELETE", "UPDATE"],
   },
 });
-
-const allowedOrigins = ["http://localhost:5173"];
 
 app.use(
   cors({

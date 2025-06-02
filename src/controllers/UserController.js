@@ -16,7 +16,7 @@ class UserController {
   }
 
   static async getCurrentUserById(req, res) {
-    const { userId } = req.user;
+    const { userId } = req.params;
     const user = await UserModel.findById(userId);
 
     if (!user) {

@@ -20,3 +20,6 @@ Content-Type: application/json
   "email": "W3mW8@example.com",
   "password": "password"
 }
+
+### Login guest
+POST http://localhost:3000/auth/login-guest

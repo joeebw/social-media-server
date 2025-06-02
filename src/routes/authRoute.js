@@ -17,4 +17,6 @@ authRouter.post(
   AuthController.login
 );
 
+authRouter.post("/login-guest", AuthController.loginGuest);
+
 export default authRouter;

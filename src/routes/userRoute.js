@@ -6,7 +6,11 @@ import authenticateToken from "../middleware/authenticateToken.js";
 const userRoute = Router();
 
 userRoute.all("/all", authenticateToken, UserController.getAllUsers);
-userRoute.get("/me", authenticateToken, UserController.getCurrentUserById);
+userRoute.get(
+  "/me/:userId",
+  authenticateToken,
+  UserController.getCurrentUserById
+);
 userRoute.get(
   "/me-friends-list",
   authenticateToken,

@@ -74,6 +74,13 @@ class AuthController {
 
     res.json({ token, id: user.id });
   }
+
+  static async loginGuest(req, res) {
+    const payload = { userId: 9 };
+    const token = generateToken(payload);
+
+    res.json({ token, id: 9 });
+  }
 }
 
 export default AuthController;
