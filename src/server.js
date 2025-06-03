@@ -8,6 +8,7 @@ import { PORT } from "./config/config.js";
 import setupRoutes from "./routes/index.js";
 import errorHandler from "./middleware/errorHandler.js";
 import registerSocketHandlers from "./socketHandler.js";
+import keepAliveService from "./utils/keepAlive.js";
 
 dotenv.config();
 
@@ -52,6 +53,10 @@ app.get("/", (req, res) => {
   res.send("Server is working");
 });
 
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
+
 app.use((req, res) => {
   res.status(404).send("Error 404: Route not found");
 });
@@ -63,6 +68,8 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT, () => {
+  const serverUrl = process.env.SERVER_URL || `http://localhost:${PORT}`;
   console.log(`Server is running in http://localhost:${PORT}`);
   console.log(`Environment: ${process.env.NODE_ENV || "development"}`);
+  keepAliveService.start(`${serverUrl}/ping`);
 });
