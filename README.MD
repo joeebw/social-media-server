@@ -20,7 +20,7 @@ Follow these steps to get the project running in your local development environm
 1.  **Clone the repository**:
 
     ```bash
-    git clone <YOUR_REPOSITORY_URL>
+    git clone https://github.com/joeebw/social-media-server.git
     cd wolfstream-backend
     ```
 
